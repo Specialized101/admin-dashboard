@@ -1,9 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
 svg {
     width: 30px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar content";
+}
+
+.header {
+    background-color: lightcoral;
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 15px 60px 15px 40px;
+    background-color: white;
+}
+
+.search-bar {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    font-size: 1.8rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #E2E8F0;
+}
+
+.user-profile {
+    grid-column: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 30px;
+
+}
+
+.user-profile .user-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.user-profile-pic {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FACC15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+.user-profile-pic img {
+    width: 40px;
+}
+
+.user-welcome {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 50px 2fr;
+    align-items: center;
+    gap: 35px;
+    
+}
+
+.user-welcome-pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #FACC15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 10px; */
+}
+
+.user-welcome img {
+    width: 60px;
+}
+
+.user-welcome-msg p:first-child {
+    font-weight: 500;
+}
+
+.user-welcome-msg p:last-child {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+
+.user-buttons {
+    /* border: 1px solid gold; */
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 30px;
+}
+
+.user-buttons button {
+    background-color: #1992D4;
+    width: 130px;
+    height: 50px;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.sidebar {
+    background-color: #1992D4;
+    grid-area: sidebar;
+
+}
+
+.content {
+    background-color: #E2E8F0;
+    grid-area: content;
 }
