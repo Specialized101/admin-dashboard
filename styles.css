@@ -13,11 +13,12 @@ html {
 
 svg {
     width: 30px;
+    fill: black;
 }
 
 .container {
     display: grid;
-    grid-template-columns: 250px 1fr;
+    grid-template-columns: 300px 1fr;
     grid-template-rows: 200px 1fr;
     grid-template-areas: 
     "sidebar header"
@@ -135,12 +136,6 @@ svg {
     font-weight: 900;
 }
 
-.sidebar {
-    background-color: #1992D4;
-    grid-area: sidebar;
-
-}
-
 #main-content {
     display: grid;
 }
@@ -151,10 +146,6 @@ svg {
     display: grid;
     grid-template-columns: 1fr 420px;
     grid-template-rows: 1fr;
-}
-
-.content > * {
-    border: 1px solid red;
 }
 
 .projects-section {
@@ -295,4 +286,65 @@ svg {
 .trend-text p:last-child {
     color: #636363;
     font-weight: 300;
+}
+
+/* SIDEBAR */
+
+
+.sidebar {
+    background-color: #1992D4;
+    grid-area: sidebar;
+    color: white;
+}
+
+.nav-links, .nav-link {
+    list-style-type: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+    /* margin-left: 40px; */
+}
+
+.nav-links li:nth-child(1){
+    margin-bottom: 50px;
+    margin-left: -10px;
+    gap: 10px;
+}
+
+.nav-links li:nth-child(1) a {
+    font-size: 1.8rem;
+}
+
+.nav-links li:nth-child(1) svg {
+    width: 50px;
+}
+
+.nav-links li:nth-child(7){
+    margin-bottom: 50px;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.nav-link a:visited {
+    color: white;
+}
+
+.nav-link svg {
+    fill: white;
 }
